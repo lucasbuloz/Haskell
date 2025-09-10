@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Invitación Cumpleaños Guadalupe</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f6f2;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 480px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 20px;
+  }
+  /* Portada / Introducción */
+  .cover {
+    background: linear-gradient(135deg, #fcefee 0%, #e6f0ea 100%);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+  }
+  /* Floral decorative elements */
+  .floral-top, .floral-bottom {
+    position: absolute;
+    width: 80px;
+    opacity: 0.15;
+  }
+  .floral-top {
+    top: 10px;
+    left: 10px;
+    transform: rotate(-15deg);
+  }
+  .floral-bottom {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(20deg);
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    color: #b87a7a;
+  }
+  .cover p {
+    font-size: 1.1rem;
+    color: #7a7a6a;
+    font-style: italic;
+    margin: 0;
+  }
+  /* Detalles del evento */
+  .details {
+    padding: 30px 25px 40px 25px;
+    background: #fefcf9;
+    color: #5a5a4a;
+    text-align: center; /* centra todo el contenido */
+  }
+  .details p {
+    font-size: 1.15rem;
+    margin: 12px 0;
+  }
+  .location {
+    font-weight: 600;
+    color: #7a8a7a;
+    margin-bottom: 15px;
+  }
+  .location a {
+    color: #7a8a7a;
+    text-decoration: underline;
+  }
+  .photo-container {
+    margin: 20px auto; /* centrado horizontal */
+    width: 250px;
+    text-align: center;
+  }
+  .photo-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .btn-confirm {
+    display: inline-block;
+    background-color: #c9b7b7;
+    color: #4a4a4a;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0 auto; /* centrado horizontal */
+  }
+  .btn-confirm:hover {
+    background-color: #b87a7a;
+    color: #fff;
+  }
+  .final-phrase {
+    margin-top: 25px;
+    font-style: italic;
+    font-weight: 600;
+    color: #7a7a6a;
+    text-align: center;
+  }
+  /* Responsive */
+  @media (max-width: 520px) {
+    .container {
+      margin: auto;
+      max-width: auto;
+    }
+    .cover h1 {
+      font-size: 2.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Portada / Introducción -->
+  <section class="cover" aria-label="Portada de la invitación">
+    <!-- SVG floral elements -->
+    <svg class="floral-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#d9b7b7">
+      <circle cx="32" cy="32" r="30" stroke="#b87a7a" stroke-width="2" fill="none"/>
+      <path d="M32 12 L32 52 M12 32 L52 32 M20 20 L44 44 M44 20 L20 44" stroke="#b87a7a" stroke-width="2" />
+    </svg>
+    <svg class="floral-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#b7d9b7">
+      <circle cx="32" cy="32" r="30" stroke="#7a8a7a" stroke-width="2" fill="none"/>
+      <path d="M32 12 L32 52 M12 32 L52 32 M20 20 L44 44 M44 20 L20 44" stroke="#7a8a7a" stroke-width="2" />
+    </svg>
+    <h1>Guadalupe – 28 años</h1>
+    <p>Te invito a compartir un día especial</p>
+  </section>
+  <!-- Detalles del evento -->
+  <section class="details" aria-label="Detalles del evento">
+    <p><strong>Sábado a las 13:30 hs</strong></p>
+    <p class="location">
+      Lugar: <a href="https://maps.app.goo.gl/pLCpFxgiXGw49Zzc9" target="_blank" id="map-link" aria-label="Ubicación en Google Maps">Sierras Azules, Zonda</a>
+    </p>
+    <div class="photo-container" aria-label="Foto del lugar">
+      <img src="https://drive.google.com/thumbnail?id=1EM8ABu6mkgYnArbQEjS2ived2j2PIR3F&sz=w1000" alt="Foto de Sierras Azules, Zonda" />
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3S2ykEpkOCy1-5RFs1S3QaFWOWN94txE7-BcHPK0DGGHs_g/viewform" class="btn-confirm" id="confirm-btn" role="button" aria-label="Confirmar asistencia">Confirmar asistencia</a>
+    <p class="final-phrase">¡Te espero para disfrutarlo!</p>
+  </section>
+</div>
+<!-- Música de fondo suave -->
+<audio autoplay loop muted id="bg-music" aria-label="Música de fondo suave">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3a3a7a7a7a.mp3?filename=soft-piano-ambient-11047.mp3" type="audio/mpeg" />
+  Tu navegador no soporta la reproducción de audio.
+</audio>
+<script>
+  // Aquí puedes agregar los links reales
+  document.getElementById('map-link').href = 'https://goo.gl/maps/your-google-maps-link';
+  document.getElementById('confirm-btn').href = 'https://your-confirmation-link.com';
+  // Activar sonido al hacer click para evitar autoplay bloqueado
+  const bgMusic = document.getElementById('bg-music');
+  bgMusic.muted = true; // Empieza silenciado
+  document.body.addEventListener('click', () => {
+    if(bgMusic.muted) {
+      bgMusic.muted = false;
+      bgMusic.volume = 0.15;
+    }
+  }, { once: true });
+</script>
+</body>
+</html>
